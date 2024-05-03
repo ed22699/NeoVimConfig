@@ -1,6 +1,6 @@
 # My NeoVim Config
 
-##Contains
+## Contains
 - Colour scheme (Rose-Pine)
 - Packet manager 
 - Telescope (file finder)
