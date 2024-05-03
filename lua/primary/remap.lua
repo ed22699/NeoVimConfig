@@ -42,3 +42,19 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>o", "<cmd>NvimTreeOpen<CR>")
 vim.keymap.set("n", "<leader>c", "<cmd>NvimTreeClose<CR>")
 
+
+-- LSP Config
+-- K - displays hover info
+-- gd - jumps to definition of symbol
+-- gD - jumps to the declaration of the symbol 
+-- gi - lists all the implementations
+-- go - jumps to the definition of the type of the symbol
+-- gr - lists all the references to the symbol
+-- gs - displays signature info about the symbol
+-- <F2> - renames all references 
+-- <F3> - format code
+-- gl - show diagnostics 
+-- [d - move to the previous diagnostic 
+-- ]d - move to next diagnostic
+-- :LspInstall to install new 
+
