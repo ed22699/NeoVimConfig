@@ -36,6 +36,18 @@ return require('packer').startup(function(use)
   -- Vim-fugitive (git tracker)
   use('tpope/vim-fugitive')
 
+  --git gutter
+  use('airblade/vim-gitgutter')
+
+  --lualine
+  use{
+      'nvim-lualine/lualine.nvim',
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
+  -- nvimTree
+  use('nvim-tree/nvim-tree.lua')
+
   -- LSP
   use {
 	  'VonHeikemen/lsp-zero.nvim',
