@@ -58,3 +58,14 @@ vim.keymap.set("n", "<leader>c", "<cmd>NvimTreeClose<CR>")
 -- ]d - move to next diagnostic
 -- :LspInstall to install new 
 
+-- Window jumping
+-- with sidebar open <C-v> opens new window
+-- <d> delete
+-- <r> rename
+-- <Tab> preview
+-- <a> create file or directory
+-- basic commands
+-- <C-w>v create window vertically
+-- hold <C-w> toggle windows
+-- <C-w>r move window right
+-- <C-w>R move window left
