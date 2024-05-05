@@ -5,6 +5,7 @@ cmp.setup({
     {name = 'nvim_lsp'},
     {name = 'nvim_lua'},
     {name = 'buffer'},
+    {name = 'luasnip'},
   },
   preselect = 'item',
   completion = {
@@ -35,4 +36,6 @@ cmp.setup({
       require('luasnip').lsp_expand(args.body)
     end,
   },
+  --- (Optional) Show source name in completion menu
+  formatting = cmp_format,
 })
