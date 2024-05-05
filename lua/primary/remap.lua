@@ -69,3 +69,32 @@ vim.keymap.set("n", "<leader>c", "<cmd>NvimTreeClose<CR>")
 -- hold <C-w> toggle windows
 -- <C-w>r move window right
 -- <C-w>R move window left
+
+-- commands
+-- H - move to top of screen
+-- L - move to bottom of screen
+-- } - move to next paragraph 
+-- zz - centre cursor on screen
+-- insert mode
+-- Ctrl + w - delete previous word
+-- Ctrl + j - add line break
+-- editing 
+-- R - replace until escape
+-- r - replace
+-- ciw - change word
+-- caw - change word and space
+-- Ctrl + r - redo
+-- visual
+-- o - move to other marked area
+-- O - move to other side of block
+-- ab - mark block of ()
+-- aB - mark block of {}
+-- at - mark block of <>
+-- ib - mark inner block of ()
+-- iB - mark inner block of {}
+-- it - mark inner block of <>
+-- = - reformat highlighted
+-- ZZ - save and quit
+-- :wqa - save and quit all
+-- :%s/old/new/g - replace all old with new throughout file
+-- :%s/old/new/gs - replace all old with new throughout file with conformations
