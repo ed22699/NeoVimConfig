@@ -52,8 +52,8 @@ return require('packer').startup(function(use)
         dependencies = { "nvim-lua/plenary.nvim" },
     }
 
-    -- autoclose
-    use 'm4xshen/autoclose.nvim'
+    -- autotag
+    use('windwp/nvim-ts-autotag')
     --lualine
     use {
         'nvim-lualine/lualine.nvim',
