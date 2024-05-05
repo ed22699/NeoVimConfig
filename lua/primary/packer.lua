@@ -37,8 +37,9 @@ return require('packer').startup(function(use)
     -- Hardtime improve workflow
     use {
         "m4xshen/hardtime.nvim",
-        dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+        dependencies = { "/nui.nvim", "nvim-lua/plenary.nvim" },
     }
+
     -- Vim-fugitive (git tracker)
     use('tpope/vim-fugitive')
 

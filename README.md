@@ -17,3 +17,4 @@
 
 ## Commands 
 - <F4> to get up code actions
+- <F3> to reformat code 
