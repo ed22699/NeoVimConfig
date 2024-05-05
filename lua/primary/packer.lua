@@ -51,6 +51,9 @@ return require('packer').startup(function(use)
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
     }
+
+    -- autoclose
+    use 'm4xshen/autoclose.nvim'
     --lualine
     use {
         'nvim-lualine/lualine.nvim',
