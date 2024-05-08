@@ -180,6 +180,11 @@ _G.packer_plugins = {
     path = "/Users/ed22699/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  ["sticky-notes"] = {
+    loaded = true,
+    path = "/Users/ed22699/.local/share/nvim/site/pack/packer/start/sticky-notes",
+    url = "https://github.com/ed22699/sticky-notes"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/ed22699/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -204,6 +209,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ed22699/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/Users/ed22699/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
   }
 }
 

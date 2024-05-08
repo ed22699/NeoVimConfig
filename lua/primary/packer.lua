@@ -5,6 +5,13 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
+    -- sticky-notes my own plugin 
+    use {
+        "ed22699/sticky-notes",
+        name = "sticky-notes"
+    } -- Your path
+
+
     -- Colour scheme
     use({
         'rose-pine/neovim',
@@ -52,8 +59,14 @@ return require('packer').startup(function(use)
         dependencies = { "nvim-lua/plenary.nvim" },
     }
 
+    -- autoclose
+    use 'm4xshen/autoclose.nvim'
+
     -- autotag
     use('windwp/nvim-ts-autotag')
+
+    -- navigate windows easier
+    use('christoomey/vim-tmux-navigator')
     --lualine
     use {
         'nvim-lualine/lualine.nvim',
