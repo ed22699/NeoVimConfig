@@ -180,10 +180,10 @@ _G.packer_plugins = {
     path = "/Users/ed22699/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
-  ["sticky-notes"] = {
+  ["sticky-notes.nvim"] = {
     loaded = true,
-    path = "/Users/ed22699/.local/share/nvim/site/pack/packer/start/sticky-notes",
-    url = "https://github.com/ed22699/sticky-notes"
+    path = "/Users/ed22699/.local/share/nvim/site/pack/packer/start/sticky-notes.nvim",
+    url = "https://github.com/ed22699/sticky-notes.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

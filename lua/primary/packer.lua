@@ -6,10 +6,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     -- sticky-notes my own plugin 
-    use {
-        "ed22699/sticky-notes",
-        name = "sticky-notes"
-    } -- Your path
+    use ("ed22699/sticky-notes.nvim")
 
 
     -- Colour scheme

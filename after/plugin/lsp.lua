@@ -23,7 +23,7 @@ require('mason-lspconfig').setup({
       require('lspconfig').marksman.setup({})
       require('lspconfig').html.setup({})
     end,
-  }, 
+  },
 })
 
 -- turn off diagnostics in gutter
