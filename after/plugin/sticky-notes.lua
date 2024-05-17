@@ -1,3 +1,1 @@
-require("sticky-notes").setup({
-    name = "Sonny",
-})
+require("sticky-notes").setup()

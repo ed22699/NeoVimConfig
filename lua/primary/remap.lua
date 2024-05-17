@@ -42,7 +42,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>o", "<cmd>NvimTreeOpen<CR>")
 vim.keymap.set("n", "<leader>c", "<cmd>NvimTreeClose<CR>")
 
-
 -- LSP Config
 -- K - displays hover info
 -- gd - jumps to definition of symbol

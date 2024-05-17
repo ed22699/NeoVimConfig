@@ -38,12 +38,6 @@ return require('packer').startup(function(use)
     -- Undo tree
     use('mbbill/undotree')
 
-    -- Hardtime improve workflow
-    use {
-        "m4xshen/hardtime.nvim",
-        dependencies = { "/nui.nvim", "nvim-lua/plenary.nvim" },
-    }
-
     -- Vim-fugitive (git tracker)
     use('tpope/vim-fugitive')
 
@@ -101,4 +95,5 @@ return require('packer').startup(function(use)
             { 'L3MON4D3/LuaSnip' },
         }
     }
+    use { "kkharji/sqlite.lua" }
 end)
