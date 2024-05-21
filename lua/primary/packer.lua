@@ -86,13 +86,20 @@ return require('packer').startup(function(use)
         branch = 'v3.x',
         requires = {
             --- Uncomment the two plugins below if you want to manage the language servers from neovim
+            { 'neovim/nvim-lspconfig' },
             { 'williamboman/mason.nvim' },
             { 'williamboman/mason-lspconfig.nvim' },
 
-            { 'neovim/nvim-lspconfig' },
             { 'hrsh7th/nvim-cmp' },
+            {'hrsh7th/cmp-buffer'},
+            {'hrsh7th/cmp-path'},
+            {"saadparwaiz1/cmp_luasnip"},
             { 'hrsh7th/cmp-nvim-lsp' },
-            { 'L3MON4D3/LuaSnip' },
+            { 'hrsh7th/cmp-nvim-lua' },
+
+            { 'L3MON4D3/LuaSnip',
+            {"rafamadriz/friendly-snippets"},
+            },
         }
     }
     use { "kkharji/sqlite.lua" }
