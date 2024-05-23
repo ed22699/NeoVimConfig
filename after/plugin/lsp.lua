@@ -22,6 +22,8 @@ require('mason-lspconfig').setup({
       require('lspconfig').typos_lsp.setup({})
       require('lspconfig').marksman.setup({})
       require('lspconfig').html.setup({})
+      require('lspconfig').ltex.setup({})
+      require('lspconfig').texlab.setup({})
     end,
   },
 })

@@ -103,4 +103,6 @@ return require('packer').startup(function(use)
         }
     }
     use { "kkharji/sqlite.lua" }
+    -- VimTex
+    use {'lervag/vimtex'}
 end)
