@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 -- Exiting a page
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
