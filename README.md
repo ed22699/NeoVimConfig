@@ -60,7 +60,7 @@ Install the following items using :Mason
 > [!NOTE]
 > Follow the structure of the other languages if you would like to add more
 
-![Screenshot](./images/carbon.png =x500)
+![Screenshot](./images/carbon.png = x500)
 ### Get Symbols
 For this you will need to install nerd fonts for iTerm2
 ```Console
