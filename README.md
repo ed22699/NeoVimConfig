@@ -2,9 +2,17 @@
 
 <!--toc:start-->
 - [My NeoVim Config](#my-neovim-config)
+  - [Example](#example)
   - [Contains](#contains)
+  - [Setup](#setup)
+    - [Creating the base config](#creating-the-base-config)
+    - [Setting up the LSP](#setting-up-the-lsp)
+    - [Get Symbols](#get-symbols)
   - [Commands](#commands)
 <!--toc:end-->
+
+## Example
+![Screenshot](./images/demo.png)
 
 ## Contains
 - Colour scheme (Rose-Pine)
@@ -42,10 +50,23 @@ Navigate to the LSP file
 foo@bar nvim % nvim after/plugin/lsp.lua
 ```
 Install the following items using :Mason
+- lua_ls
+- csharp_ls
+- typos_lsp
+- marksman
+- html
+- ltex
+- texlab
 > [!NOTE]
 > Follow the structure of the other languages if you would like to add more
 
-
+![Screenshot](./images/carbon.png)
+### Get Symbols
+For this you will need to install nerd fonts for iTerm2
+```Console
+foo@bar ~ $ curl -sS https://webi.sh/nerdfont | sh
+```
+Now go to settings -> profiles -> text and select the font as DroidSansMono NF
 ## Commands 
 - <F4> to get up code actions
 - <F3> to reformat code
