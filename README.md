@@ -67,6 +67,16 @@ For this you will need to install nerd fonts for iTerm2
 foo@bar ~ $ curl -sS https://webi.sh/nerdfont | sh
 ```
 Now go to settings -> profiles -> text and select the font as DroidSansMono NF
+### Configure Latex Setup
+- install [MacTex](https://www.latex-project.org/get/)
+- install [Skim](https://skim-app.sourceforge.io)
+- run .tex files
+> [!NOTE]
+> If any errors are occuring with modules within VimTex install modules using
+Tex Live Utility
+
+To configure inverse search on Skim add the following: 
+![Screenshot](./images/skim.png)
 ## Commands 
 - <F4> to get up code actions
 - <F3> to reformat code
