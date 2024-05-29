@@ -30,17 +30,22 @@ ls.add_snippets("lua", {
 })
 
 ls.add_snippets("tex", {
-    s("beg", {
-        t("\\begin{"), i(1), t("}"),
-        t({ "", "\t"}), i(0),
-        t({ "","\\end{"}), rep(1), t("}"),
-    }),
-    s("beg2", fmt(
+    s("beg", fmt(
     [[ 
     \begin{{{}}}
     {}
     \end{{{}}}
     ]], {
        i(1), i(0), rep(1)
-   }))
+   })),
+   s("bold", {
+       t('\textbf{'),
+       i(1),
+       t('}')
+   }),
+   s("bi", {
+       t('\textbf{textit{'),
+       i(1),
+       t('}}')
+   })
 })
