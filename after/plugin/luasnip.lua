@@ -16,7 +16,7 @@ rec_ls = function()
             -- important!! Having the sn(...) as the first choice will cause infinite recursion.
             t({ "" }),
             -- The same dynamicNode as in the snippet (also note: self reference).
-            sn(nil, { t({ "", "\t\\item " }), i(1), d(2, rec_ls, {}) }),
+            sn(nil, { t({ "", "\t\\item " }), i(2), d(3, rec_ls, {}) }),
         }),
     });
 end
@@ -52,7 +52,7 @@ ls.add_snippets("tex", {
 
     s("ls", {
         t("\\begin{"), i(1), t("}"),
-        t("\t\\item " ), i(2), d(3, rec_ls, {}),
+        t({"","\t\\item "}), i(2), d(3, rec_ls, {}),
         t({ "", "\\end{itemize}" }), i(0)
     }),
     s("bold", {
