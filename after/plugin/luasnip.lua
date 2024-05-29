@@ -38,14 +38,16 @@ ls.add_snippets("tex", {
     ]], {
        i(1), i(0), rep(1)
    })),
-   s("bold", {
-       t('\textbf{'),
-       i(1),
-       t('}')
-   }),
-   s("bi", {
-       t('\textbf{textit{'),
-       i(1),
-       t('}}')
-   })
+   s("bold", fmt(
+   [[
+   \textbf{<>}
+   ]], {
+       i(1)
+   })),
+   s("bi", fmt(
+   [[
+   \textbf{\textit{<>}}
+   ]], {
+       i(1)
+   }))
 })
