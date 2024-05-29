@@ -40,13 +40,13 @@ ls.add_snippets("tex", {
    })),
    s("bold", fmt(
    [[
-   \textbf{<>}
+   \textbf{{{}}}
    ]], {
        i(1)
    })),
    s("bi", fmt(
    [[
-   \textbf{\textit{<>}}
+   \textbf{\textit{{{}}}}
    ]], {
        i(1)
    }))
