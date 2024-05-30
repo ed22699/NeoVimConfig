@@ -10,16 +10,29 @@ local f = ls.function_node                    --insert function into snippet
 local d = ls.dynamic_node                     --like function node but returns snippet rather than string
 local sn = ls.snippet_node
 local rec_ls
-rec_ls = function()
-    return sn(nil, {
-        c(1, {
-            -- important!! Having the sn(...) as the first choice will cause infinite recursion.
-            t({ "" }),
-            -- The same dynamicNode as in the snippet (also note: self reference).
-            sn(nil, { t({ "", "\t\\item " }), i(2), d(3, rec_ls, {}) }),
-        }),
-    });
-end
+
+-- vim.api.nvim_set_keymap("i", "<C-E>", "<Plug>luasnip-next-choice", {})
+-- vim.api.nvim_set_keymap("s", "<C-E>", "<Plug>luasnip-next-choice", {})
+-- vim.keymap.set({ "i" }, "<CR>", function()
+--     if ls.choice_active() then
+--         return "<Plug>luasnip-next-choice"
+--     else
+--         return "<CR>"
+--     end
+-- end, {
+--     expr = true,
+-- })
+
+-- rec_ls = function()
+--     return sn(nil, {
+--         c(1, {
+--             -- important!! Having the sn(...) as the first choice will cause infinite recursion.
+--             t({ "" }),
+--             -- The same dynamicNode as in the snippet (also note: self reference).
+--             sn(nil, { t({ "", "\t\\item " }), i(1), d(2, rec_ls, {}) }),
+--         }),
+--     });
+-- end
 
 vim.keymap.set({ "i", "s" }, "<A-k>", function()
     if ls.expand_or_jumpable() then
@@ -50,11 +63,27 @@ ls.add_snippets("tex", {
             i(1), i(0), rep(1)
         })),
 
-    s("ls", {
-        t("\\begin{"), i(1), t("}"),
-        t({"","\t\\item "}), i(2), d(3, rec_ls, {}),
-        t({ "", "\\end{itemize}" }), i(0)
+    --    s("ls", {
+    --        t("\\begin{"), i(1), t("}"),
+    --        t({ "", "\t\\item " }), i(2), d(3, rec_ls, {}),
+    --        t({ "", "\\end{itemize}" }), i(0)
+    --    }),
+    s("bullet", fmt([[
+        \begin{itemize}
+            \item <>
+        \end{itemize}
+        ]], { i(1) }, { delimiters = '<>' })),
+
+    s("list", fmt([[
+        \begin{enumerate}
+            \item <>
+        \end{enumerate}
+        ]], { i(1) }, { delimiters = '<>' })),
+
+    s("item", {
+        t("\\item "), i(1)
     }),
+
     s("bold", {
         t("\\textbf{"), i(1), t("}}")
     }),
