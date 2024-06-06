@@ -53,6 +53,19 @@ ls.add_snippets("lua", {
     })
 })
 
+ls.add_snippets("cs", {
+    s("func", fmt(
+    [[
+    /// <summary>
+    /// []
+    /// </summary>
+    public [] []([]){
+        []
+    }
+    ]], {i(4),i(1),i(2),i(3),i(5)}, {delimiters = '[]'}
+    )),
+})
+
 ls.add_snippets("tex", {
     s("beg", fmt(
         [[
