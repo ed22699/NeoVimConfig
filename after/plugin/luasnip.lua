@@ -33,26 +33,43 @@ ls.add_snippets("lua", {
 
 ls.add_snippets("cs", {
     s("func", fmt(
-    [[
+        [[
     /// <summary>
     /// []
     /// </summary>
     public [] []([]){
         []
     }
-    ]], {i(4),i(1),i(2),i(3),i(5)}, {delimiters = '[]'}
+    ]], { i(4), i(1), i(2), i(3), i(5) }, { delimiters = '[]' }
     )),
 })
 
 ls.add_snippets("html", {
-s("begin", fmt([[
+    s("begin", fmt([[
 <!DOCTYPE html>
 <html>
     <body>
         {}
     </body>
 </html>
-]], { i(1)}, {delimiters = '{}'}))
+]], { i(1) }, { delimiters = '{}' })),
+    s("p", fmt([[
+<p>
+{}
+</p>
+]], { i(1) }, { delimiters = '{}' })),
+s("h", fmt([[
+<h{}>{}</h{}>
+]], {i(1), i(2), rep(1)}, {delimiters="{}"})),
+s("img", fmt([[
+<img fmt="{}" alt="{}">
+]], {i(1), i(2)}, {delimiters="{}"})),
+s("video", fmt([[
+<video controls>
+  <source src="{}" type="{}">
+Your browser does not support the video tag.
+</video>
+]], {i(1), i(2)}, {delimiters="{}"}))
 })
 
 ls.add_snippets("tex", {
