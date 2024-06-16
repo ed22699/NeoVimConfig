@@ -11,28 +11,6 @@ local d = ls.dynamic_node                     --like function node but returns s
 local sn = ls.snippet_node
 local rec_ls
 
--- vim.api.nvim_set_keymap("i", "<C-E>", "<Plug>luasnip-next-choice", {})
--- vim.api.nvim_set_keymap("s", "<C-E>", "<Plug>luasnip-next-choice", {})
--- vim.keymap.set({ "i" }, "<CR>", function()
---     if ls.choice_active() then
---         return "<Plug>luasnip-next-choice"
---     else
---         return "<CR>"
---     end
--- end, {
---     expr = true,
--- })
-
--- rec_ls = function()
---     return sn(nil, {
---         c(1, {
---             -- important!! Having the sn(...) as the first choice will cause infinite recursion.
---             t({ "" }),
---             -- The same dynamicNode as in the snippet (also note: self reference).
---             sn(nil, { t({ "", "\t\\item " }), i(1), d(2, rec_ls, {}) }),
---         }),
---     });
--- end
 
 vim.keymap.set({ "i", "s" }, "<A-k>", function()
     if ls.expand_or_jumpable() then
@@ -64,6 +42,17 @@ ls.add_snippets("cs", {
     }
     ]], {i(4),i(1),i(2),i(3),i(5)}, {delimiters = '[]'}
     )),
+})
+
+ls.add_snippets("html", {
+s("begin", fmt([[
+<!DOCTYPE html>
+<html>
+    <body>
+        {}
+    </body>
+</html>
+]], { i(1)}, {delimiters = '{}'}))
 })
 
 ls.add_snippets("tex", {
