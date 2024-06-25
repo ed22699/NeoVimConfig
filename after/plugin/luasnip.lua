@@ -47,18 +47,26 @@ ls.add_snippets("cs", {
 ls.add_snippets("html", {
     s("begin", fmt([[
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{}</title>
+    </head>
     <body>
         {}
     </body>
 </html>
-]], { i(1) }, { delimiters = '{}' })),
+]], { i(1), i(2) }, { delimiters = '{}' })),
 
     s("p", fmt([[
 <p>
 {}
 </p>
 ]], { i(1) }, { delimiters = '{}' })),
+
+s("link", fmt([[
+<a href="{}">{}</a>
+]], { i(1), i(2) }, { delimiters = "{}" })),
 
     s("h", fmt([[
 <h{}>{}</h{}>
