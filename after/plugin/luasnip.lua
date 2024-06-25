@@ -53,23 +53,27 @@ ls.add_snippets("html", {
     </body>
 </html>
 ]], { i(1) }, { delimiters = '{}' })),
+
     s("p", fmt([[
 <p>
 {}
 </p>
 ]], { i(1) }, { delimiters = '{}' })),
-s("h", fmt([[
+
+    s("h", fmt([[
 <h{}>{}</h{}>
-]], {i(1), i(2), rep(1)}, {delimiters="{}"})),
-s("img", fmt([[
-<img fmt="{}" alt="{}">
-]], {i(1), i(2)}, {delimiters="{}"})),
-s("video", fmt([[
+]], { i(1), i(2), rep(1) }, { delimiters = "{}" })),
+
+    s("img", fmt([[
+<img src="{}" alt="{}">
+]], { i(1), i(2) }, { delimiters = "{}" })),
+
+    s("video", fmt([[
 <video controls>
   <source src="{}" type="{}">
 Your browser does not support the video tag.
 </video>
-]], {i(1), i(2)}, {delimiters="{}"}))
+]], { i(1), i(2) }, { delimiters = "{}" }))
 })
 
 ls.add_snippets("tex", {
