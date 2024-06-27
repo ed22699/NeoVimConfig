@@ -25,6 +25,7 @@ require('mason-lspconfig').setup({
       require('lspconfig').ltex.setup({})
       require('lspconfig').texlab.setup({})
       require('lspconfig').cssls.setup({})
+      require('lspconfig').pylsp.setup({})
     end,
   },
 })
