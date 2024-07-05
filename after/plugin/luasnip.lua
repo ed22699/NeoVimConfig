@@ -62,7 +62,11 @@ ls.add_snippets("html", {
 s("css", fmt([[
 <link rel="stylesheet" href="{}">
 ]],{i(1)}, {delimiters="{}"})),
-
+s("div", fmt([[
+<div>
+{}
+</div>
+]], {i(1)}, {delimiters = '{}'})),
     s("p", fmt([[
 <p>
 {}
