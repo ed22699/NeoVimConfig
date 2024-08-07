@@ -3,7 +3,7 @@ local cmp_action = require('lsp-zero').cmp_action()
 local cmp_format = require('lsp-zero').cmp_format({details = true})
 
 -- require("lazy").setup()
--- require('luasnip.loaders.from_vscode').lazy_load()
+require('luasnip.loaders.from_vscode').lazy_load()
 
 cmp.setup({
   sources = cmp.config.sources({

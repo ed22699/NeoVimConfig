@@ -40,7 +40,11 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>o", "<cmd>NvimTreeOpen<CR>")
 vim.keymap.set("n", "<leader>c", "<cmd>NvimTreeClose<CR>")
 
+-- exits highlighting for all search matches
 vim.keymap.set("n", "<C-l>", ":<C-u>nohlsearch<CR><C-l>", { silent = true })
+
+-- repeat substitute command with flags included
+vim.keymap.set("n", "&", ":&&<CR>")
 
 -- LSP Config
 -- K - displays hover info

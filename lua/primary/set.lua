@@ -30,4 +30,7 @@ vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
 
-
+vim.opt.ignorecase = true
+vim.opt.infercase = true
+vim.opt.spell = true
+vim.opt.spelllang="en_gb"
