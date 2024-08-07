@@ -43,7 +43,6 @@ vim.keymap.set("n", "<leader>c", "<cmd>NvimTreeClose<CR>")
 -- exits highlighting for all search matches
 vim.keymap.set("n", "<C-l>", ":<C-u>nohlsearch<CR><C-l>", { silent = true })
 
--- repeat substitute command with flags included
 vim.keymap.set("n", "&", ":&&<CR>")
 
 -- LSP Config
