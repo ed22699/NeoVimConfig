@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme rose-pine')
         end
     })
+
     -- Package manager (PackerSync)
     use 'wbthomason/packer.nvim'
 
