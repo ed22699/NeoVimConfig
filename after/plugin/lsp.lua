@@ -21,10 +21,11 @@ require('mason-lspconfig').setup({
     function(server_name)
       require('lspconfig').lua_ls.setup({})
       require('lspconfig').csharp_ls.setup({})
-      require('lspconfig').typos_lsp.setup({})
       require('lspconfig').marksman.setup({})
       require('lspconfig').html.setup({})
-      require('lspconfig').ltex.setup({})
+--      require('lspconfig').ltex.setup({
+--          language="en_gb"
+--      })
       require('lspconfig').texlab.setup({})
       require('lspconfig').cssls.setup({})
       require('lspconfig').pylsp.setup({})
