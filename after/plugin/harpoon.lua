@@ -5,7 +5,7 @@ local ui = require("harpoon.ui")
 vim.keymap.set("n", "<leader>a", mark.add_file)
 
 -- keymap for quick menu (C-m)
-vim.keymap.set("n", "<leader>t", ui.toggle_quick_menu)
+vim.keymap.set("n", "<leader>c", ui.toggle_quick_menu)
 
 -- keymap for the saved pages (_num)
 vim.keymap.set("n", "<leader>1", function() ui.nav_file(1) end)

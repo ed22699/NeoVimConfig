@@ -39,11 +39,10 @@ vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left>
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Open and close the directory section
-vim.keymap.set("n", "<leader>o", "<cmd>NvimTreeOpen<CR>")
-vim.keymap.set("n", "<leader>c", "<cmd>NvimTreeClose<CR>")
+vim.keymap.set("n", "<leader>o", "<cmd>NvimTreeToggle<CR>")
 
 -- exits highlighting for all search matches
-vim.keymap.set("n", "<C-l>", "<cmd>nohlsearch<CR>", { silent = true })
+vim.keymap.set("n", "<leader>l", "<cmd>nohlsearch<CR>", { silent = true })
 
 vim.keymap.set("n", "&", ":&&<CR>")
 

@@ -22,20 +22,20 @@ cmp.setup({
     ['<C-e>'] = cmp.mapping.abort(),
     ['<C-f>'] = cmp_action.luasnip_jump_forward(),
     ['<C-b>'] = cmp_action.luasnip_jump_backward(),
-    -- ['<S-Tab>'] = cmp.mapping(function()
-    --   if cmp.visible() then
-    --     cmp.select_prev_item({behavior = 'insert'})
-    --   else
-    --     cmp.complete()
-    --   end
-    -- end),
-    -- ['<Tab>'] = cmp.mapping(function()
-    --   if cmp.visible() then
-    --     cmp.select_next_item({behavior = 'insert'})
-    --   else
-    --     cmp.complete()
-    --   end
-    -- end),
+    ['<S-Tab>'] = cmp.mapping(function()
+      if cmp.visible() then
+        cmp.select_prev_item({behavior = 'insert'})
+      else
+        cmp.complete()
+      end
+    end),
+    ['<Tab>'] = cmp.mapping(function()
+      if cmp.visible() then
+        cmp.select_next_item({behavior = 'insert'})
+      else
+        cmp.complete()
+      end
+    end),
   },
   snippet = {
     expand = function(args)
