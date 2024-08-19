@@ -34,3 +34,4 @@ vim.opt.ignorecase = true
 vim.opt.infercase = true
 vim.opt.spell = true
 vim.opt.spelllang="en_gb"
+

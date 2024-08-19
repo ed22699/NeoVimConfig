@@ -23,6 +23,7 @@ require('mason-lspconfig').setup({
       require('lspconfig').csharp_ls.setup({})
       require('lspconfig').marksman.setup({})
       require('lspconfig').html.setup({})
+      require('lspconfig').html.setup({})
       require('lspconfig').ltex.setup({
           filetypes = {  "markdown", "md", "tex" },
           settings = {

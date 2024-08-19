@@ -19,14 +19,16 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- Paste and preserve
-vim.keymap.set("x", "<leader>p", "\"_dP")
+-- Paste clipboard
+vim.keymap.set("n", "<leader>p", "\"+p")
+vim.keymap.set("n", "<leader>P", "\"+P")
 
 -- Same as copying outside of vim
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
--- Don't think these work
+
+-- Delete doesn't replace
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
@@ -41,24 +43,32 @@ vim.keymap.set("n", "<leader>o", "<cmd>NvimTreeOpen<CR>")
 vim.keymap.set("n", "<leader>c", "<cmd>NvimTreeClose<CR>")
 
 -- exits highlighting for all search matches
-vim.keymap.set("n", "<C-l>", ":<C-u>nohlsearch<CR><C-l>", { silent = true })
+vim.keymap.set("n", "<C-l>", "<cmd>nohlsearch<CR>", { silent = true })
 
 vim.keymap.set("n", "&", ":&&<CR>")
 
+-- Terminal mode key bindings
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+vim.keymap.set("t", "<C-v><Esc>", "<Esc>")
+
+-- terminal commands 
+vim.keymap.set("n", "<leader>th", "<cmd>below 12split | te <CR>", { silent = true })
+vim.keymap.set("n", "<leader>tt", "<cmd> tabedit | te <CR>", { silent = true })
+vim.keymap.set("n", "<leader>ts", "<cmd> tabedit | te pushd index.html;  python3 -m http.server 9999; popd <CR>", { silent = true })
 -- LSP Config
 -- K - displays hover info
 -- gd - jumps to definition of symbol
--- gD - jumps to the declaration of the symbol 
+-- gD - jumps to the declaration of the symbol
 -- gi - lists all the implementations
 -- go - jumps to the definition of the type of the symbol
 -- gr - lists all the references to the symbol
 -- gs - displays signature info about the symbol
--- <F2> - renames all references 
+-- <F2> - renames all references
 -- <F3> - format code
--- gl - show diagnostics 
--- [d - move to the previous diagnostic 
+-- gl - show diagnostics
+-- [d - move to the previous diagnostic
 -- ]d - move to next diagnostic
--- :LspInstall to install new 
+-- :LspInstall to install new
 
 -- Window jumping
 -- with sidebar open <C-v> opens new window
@@ -75,12 +85,12 @@ vim.keymap.set("n", "&", ":&&<CR>")
 -- commands
 -- H - move to top of screen
 -- L - move to bottom of screen
--- } - move to next paragraph 
+-- } - move to next paragraph
 -- zz - centre cursor on screen
 -- insert mode
 -- Ctrl + w - delete previous word
 -- Ctrl + j - add line break
--- editing 
+-- editing
 -- R - replace until escape
 -- r - replace
 -- ciw - change word

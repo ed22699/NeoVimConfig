@@ -18,6 +18,9 @@ return require('packer').startup(function(use)
         end
     })
 
+    -- Session manager 
+    use("folke/persistence.nvim")
+
     -- Package manager (PackerSync)
     use 'wbthomason/packer.nvim'
 
@@ -42,6 +45,9 @@ return require('packer').startup(function(use)
     -- Vim-fugitive (git tracker)
     use('tpope/vim-fugitive')
 
+    -- autoclose
+    use 'm4xshen/autoclose.nvim'
+
     --git gutter
     use('airblade/vim-gitgutter')
 
@@ -51,14 +57,15 @@ return require('packer').startup(function(use)
         dependencies = { "nvim-lua/plenary.nvim" },
     }
 
-    -- autoclose
-    use 'm4xshen/autoclose.nvim'
+    -- comments
+    use ( 'numToStr/Comment.nvim' )
 
     -- autotag
     use('windwp/nvim-ts-autotag')
 
     -- navigate windows easier
     use('christoomey/vim-tmux-navigator')
+
     --lualine
     use {
         'nvim-lualine/lualine.nvim',
