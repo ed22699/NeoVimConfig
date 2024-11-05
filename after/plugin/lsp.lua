@@ -24,6 +24,8 @@ require('mason-lspconfig').setup({
       require('lspconfig').marksman.setup({})
       require('lspconfig').html.setup({})
       require('lspconfig').html.setup({})
+      require('lspconfig').pylyzer.setup({})
+      require('lspconfig').clangd.setup({})
       require('lspconfig').ltex.setup({
           filetypes = {  "markdown", "md", "tex" },
           settings = {
@@ -33,6 +35,7 @@ require('mason-lspconfig').setup({
           }
       })
       require('lspconfig').texlab.setup({})
+      require('lspconfig').yamlls.setup({})
       require('lspconfig').cssls.setup({})
       require('lspconfig').pylsp.setup({})
       require('lspconfig').bashls.setup({})
