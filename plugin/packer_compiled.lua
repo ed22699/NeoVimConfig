@@ -245,6 +245,11 @@ _G.packer_plugins = {
     path = "/Users/ed22699/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
   },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/Users/ed22699/.local/share/nvim/site/pack/packer/start/vim-test",
+    url = "https://github.com/vim-test/vim-test"
+  },
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/Users/ed22699/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
@@ -254,6 +259,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ed22699/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
+  },
+  vimux = {
+    loaded = true,
+    path = "/Users/ed22699/.local/share/nvim/site/pack/packer/start/vimux",
+    url = "https://github.com/preservim/vimux"
   }
 }
 

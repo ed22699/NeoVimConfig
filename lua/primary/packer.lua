@@ -5,8 +5,8 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
-    -- sticky-notes my own plugin 
-    use ("ed22699/sticky-notes.nvim")
+    -- sticky-notes my own plugin
+    use("ed22699/sticky-notes.nvim")
 
 
     -- Colour scheme
@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
         end
     })
 
-    -- Session manager 
+    -- Session manager
     use("folke/persistence.nvim")
 
     -- Package manager (PackerSync)
@@ -52,13 +52,13 @@ return require('packer').startup(function(use)
     use('airblade/vim-gitgutter')
 
     -- Todo comments
-    use{
+    use {
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
     }
 
     -- comments
-    use ( 'numToStr/Comment.nvim' )
+    use('numToStr/Comment.nvim')
 
     -- autotag
     use('windwp/nvim-ts-autotag')
@@ -69,7 +69,7 @@ return require('packer').startup(function(use)
     --lualine
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons'}
+        requires = { 'nvim-tree/nvim-web-devicons' }
     }
 
     -- markdown preview
@@ -99,18 +99,23 @@ return require('packer').startup(function(use)
             { 'williamboman/mason-lspconfig.nvim' },
 
             { 'hrsh7th/nvim-cmp' },
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {"saadparwaiz1/cmp_luasnip"},
+            { 'hrsh7th/cmp-buffer' },
+            { 'hrsh7th/cmp-path' },
+            { "saadparwaiz1/cmp_luasnip" },
             { 'hrsh7th/cmp-nvim-lsp' },
             { 'hrsh7th/cmp-nvim-lua' },
 
             { 'L3MON4D3/LuaSnip',
-            {"rafamadriz/friendly-snippets"},
+                { "rafamadriz/friendly-snippets" },
             },
         }
     }
     use { "kkharji/sqlite.lua" }
     -- VimTex
-    use {'lervag/vimtex'}
+    use { 'lervag/vimtex' }
+    -- VimTest
+    use { 'vim-test/vim-test',
+        requires = {
+            { "preservim/vimux" }
+        } }
 end)
